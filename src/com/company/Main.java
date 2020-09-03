@@ -14,5 +14,16 @@ public class Main {
         animal.walk();
         animal.walk();
         animal.walk();
+
+        human human = new human();
+
+        car audi = new car();
+        audi.model = "q5";
+        audi.producer = "audi";
+        audi.colour ="black";
+
+        human.addMyCar(audi);
+
+
     }
 }
