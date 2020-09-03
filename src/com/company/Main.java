@@ -25,5 +25,9 @@ public class Main {
         human.addMyCar(audi);
 
 
+        human.getSalary();
+        human.setSalary(human.salary);
+        human.getSalary();
     }
+
 }
