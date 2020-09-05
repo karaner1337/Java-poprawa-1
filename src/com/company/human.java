@@ -11,6 +11,9 @@ public class human {
 
     Date date = new Date();
 
+
+
+
     void addMyCar(car car) {
         this.car = car;
     }
@@ -34,5 +37,16 @@ public class human {
 
         }
         return this.salary = salary;
+    }
+    public void setNewCar(car car) {
+        if (salary >= car.price) {
+            System.out.println("kupujesz za sianko");
+            getCar();
+        } else if (salary > (car.price / 12)) {
+            System.out.println("kredycik");
+            getCar();
+        } else {
+            System.out.println("jestes biedny");
+        }
     }
 }

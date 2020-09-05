@@ -21,13 +21,15 @@ public class Main {
         audi.model = "q5";
         audi.producer = "audi";
         audi.colour ="black";
+        audi.price = 1000.0;
+
 
         human.addMyCar(audi);
 
+        human.setNewCar(audi);
 
-        human.getSalary();
-        human.setSalary(human.salary);
-        human.getSalary();
+
+
     }
 
 }
