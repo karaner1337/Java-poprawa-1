@@ -15,6 +15,10 @@ public class animal {
 
         }
 
+
+    }
+    public String toString() {
+        return species + " " + name + " " + weight;
     }
 
     void feed(){
