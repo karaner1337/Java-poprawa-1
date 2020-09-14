@@ -2,6 +2,8 @@ package com.company;
 
 
 import com.company.creatures.human;
+import com.company.devices.Electric;
+import com.company.devices.LPG;
 import com.company.devices.car;
 import com.company.devices.phone;
 import com.company.creatures.animal;
@@ -37,13 +39,13 @@ public class Main {
         human.name = " Grzegorz";
         animal.name = " max";
 
-        car audi = new car();
+        car audi = new LPG();
         audi.model = "q5";
         audi.producer = "audi";
         audi.colour ="black";
         audi.price = 1000.0;
 
-        car renault = new car();
+        car renault = new Electric();
         renault.model = "clio";
         renault.producer = "renault";
         renault.colour ="red";
