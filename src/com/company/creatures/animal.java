@@ -1,30 +1,31 @@
-package com.company;
+package com.company.creatures;
 
 import com.company.Salleable;
-import com.company.human;
 
-public class animal {
-    final static Double DEFAULT_WEIGHT_DOG =4.0;
-    final String species;
-    String name;
-    private Double weight;
+public abstract class animal implements Feedable {
+    public Double DEFAULT_WEIGHT_DOG =4.0;
+    public String species;
+    public String name;
+    public Double weight;
 
 
-    public animal(String species) {
+    public animal(String species, Double weight) {
         this.species = species;
-
-        if(this.species == "dog"){
-            weight= DEFAULT_WEIGHT_DOG;
-
-        }
-
-
+        this.weight = weight;
     }
+    public animal() {
+        this.weight = 20.0;
+    }
+
+
+
+
+
     public String toString() {
         return species + " " + name + " " + weight;
     }
 
-    void feed(){
+    public void feed(){
         weight++;
         if(weight>=100) {
             System.out.println("zdechlem( przejedzenie");
@@ -33,7 +34,7 @@ public class animal {
         }else
             System.out.println("thx for food, my weight is now" + weight);
     }
-    void walk(){
+    public void walk(){
         weight--;
         if(weight>=100) {
             System.out.println("zdechlem( przejedzenie nie wyprowadzisz mnie");

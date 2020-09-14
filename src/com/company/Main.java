@@ -1,13 +1,27 @@
 package com.company;
 
+
+import com.company.creatures.human;
 import com.company.devices.car;
 import com.company.devices.phone;
-
+import com.company.creatures.animal;
+import com.company.creatures.FarmAnimal;
+import com.company.creatures.Pet;
+import com.company.creatures.Feedable;
 public class Main {
 
     public static void main(String[] args) {
 
-        animal animal = new animal("dog") ;
+        animal animal = new animal() {
+            @Override
+            public void feed(Double foodWeight) {
+
+
+
+            }
+
+        };
+
         animal.feed();
         animal.feed();
         animal.walk();
