@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.devices.car;
+import com.company.devices.phone;
 
 import java.util.Date;
 
@@ -9,6 +10,8 @@ public class human {
     animal pet;
     public com.company.devices.car car;
     private Double salary = 1200.0;
+    Double cash = 0.0;
+    phone phone;
 
     Date date = new Date();
 
@@ -50,5 +53,24 @@ public class human {
         } else {
             System.out.println("jestes biedny");
         }
+    }
+    public double getCash() {
+        return cash + salary;
+    }
+
+    public void setCash(double cash) {
+        this.cash = this.cash + cash;
+    }
+    public animal getPet() {
+        return pet;
+    }
+    public void setPet(animal pet) {
+        this.pet = pet;
+    }
+    public phone getPhone() {
+        return phone;
+    }
+    public void setPhone(phone phone) {
+        this.phone = phone;
     }
 }

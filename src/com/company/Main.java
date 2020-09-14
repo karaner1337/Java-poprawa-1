@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.devices.car;
+import com.company.devices.phone;
 
 public class Main {
 
@@ -42,6 +43,29 @@ public class Main {
         System.out.println(human.toString());
         System.out.println(audi.toString());
         System.out.println(animal.toString());
+
+        phone phone = new phone();
+        phone.setModel("Iphone");
+
+        human seller = new human();
+        seller.setPhone(phone);
+        seller.setPet(animal);
+        seller.addMyCar(audi);
+        seller.setSalary(0.0);
+
+        human buyer = new human();
+        buyer.setSalary(0.0);
+        buyer.setCash(8000);
+
+        System.out.println("siano sprzedawcy przed sprzedaza " + seller.getCash());
+        System.out.println("siano nabywcy przed kupnem  " + buyer.getCash());
+
+        animal.salleable.sell(seller, buyer, 3000.0);
+        audi.salleable.sell(seller, buyer, 2000.0);
+        phone.salleable.sell(seller, buyer, 7000.0);
+
+        System.out.println("siano sprzedawcy przed sprzedaza " + seller.getCash());
+        System.out.println("siano nabywcy przed kupnem  " + buyer.getCash());
 
     }
 
